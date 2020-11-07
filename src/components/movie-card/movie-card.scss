@@ -1,0 +1,37 @@
+.movie-card {
+  width: 450px;
+  height: 280px;
+  background: #fff;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3) );
+
+  &__info {
+    width: 270px;
+    padding: 20px;
+  }
+
+  &__title {
+    margin-bottom: 7px !important;
+  }
+
+  &__date {
+    margin-bottom: 7px;
+  }
+
+  &__tags {
+    display: flex;
+    margin-bottom: 7px;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    margin-right: 8px;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 22px;
+
+    color: #000000;
+  }
+}
+
