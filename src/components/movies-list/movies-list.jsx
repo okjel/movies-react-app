@@ -4,6 +4,8 @@ import MovieCard from '../movie-card';
 import MovieDbService from '../../services/movie-db-service';
 
 import './movies-list.scss';
+import Loading from '../../shared/loading';
+import ErrorAlert from '../../shared/errorAlert';
 
 export default class MoviesList extends Component {
   movieDbService = new MovieDbService();
@@ -30,8 +32,10 @@ export default class MoviesList extends Component {
             genres: genresFilm,
           };
         });
-        this.setState({ movies });
-      });
+
+        this.setState({ movies, loading: false });
+      })
+      .catch(this.onError);
   };
 
   componentDidMount() {
@@ -40,10 +44,24 @@ export default class MoviesList extends Component {
 
   state = {
     movies: [],
+    loading: true,
+    error: false,
+  };
+
+  onError = (err) => {
+    console.log(err);
+    this.setState({
+      loading: false,
+      error: true,
+    });
   };
 
   render() {
-    return (
+    const { loading, error } = this.state;
+    const hasData = !(loading || error);
+    const loadingBlock = loading ? <Loading /> : null;
+    const errorBlock = error ? <ErrorAlert /> : null;
+    const content = hasData ? (
       <List
         className="movies-list"
         grid={{ gutter: 36, column: 2 }}
@@ -56,6 +74,14 @@ export default class MoviesList extends Component {
           </List.Item>
         )}
       />
+    ) : null;
+
+    return (
+      <>
+        {loadingBlock}
+        {errorBlock}
+        {content}
+      </>
     );
   }
 }

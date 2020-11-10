@@ -20,20 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18e43624-bba1-4541-b990-3a7ccc9e3987" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/shared/errorAlert/error-alert.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/errorAlert/error-alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/errorAlert/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/loading/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/loading/loading.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/loading/loading.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie-card/movie-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-card/movie-card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movies-list/movies-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movies-list/movies-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tag/tag.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tag/tag.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movies-list/movies-list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movies-list/movies-list.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/movie-db-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie-db-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +95,9 @@
       <workItem from="1604671514860" duration="77000" />
       <workItem from="1604671872361" duration="4909000" />
       <workItem from="1604733036745" duration="6230000" />
-      <workItem from="1604756917478" duration="1809000" />
+      <workItem from="1604756917478" duration="2409000" />
+      <workItem from="1604840173199" duration="437000" />
+      <workItem from="1604987457024" duration="5827000" />
     </task>
     <servers />
   </component>

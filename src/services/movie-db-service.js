@@ -23,7 +23,6 @@ export default class MovieDbService {
 
   async getGenres(name = 'return') {
     const path = 'genre/movie/list';
-    const res = await this.getResource(`${path}${this.queryApi}&query=${name}`);
-    return res;
+    return this.getResource(`${path}${this.queryApi}&query=${name}`);
   }
 }
