@@ -1,3 +1,5 @@
+// import _ from 'lodash';
+
 export default class MovieDbService {
   apiBase = 'https://api.themoviedb.org/3/';
 
@@ -15,13 +17,12 @@ export default class MovieDbService {
     return res.json();
   }
 
-  async getFilms(name = 'return') {
+  getFilms(name, page) {
     const path = 'search/movie';
-    const res = await this.getResource(`${path}${this.queryApi}&query=${name}`);
-    return res.results;
+    return this.getResource(`${path}${this.queryApi}&query=${name}&page=${page}`);
   }
 
-  async getGenres(name = 'return') {
+  getGenres(name = 'return') {
     const path = 'genre/movie/list';
     return this.getResource(`${path}${this.queryApi}&query=${name}`);
   }

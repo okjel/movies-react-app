@@ -14,7 +14,7 @@
   "rules": {
     "curly": ["error"],
     "max-depth": ["warn", 4],
-    "id-length": ["warn", { "exceptions": ["i", "j"], "min": 2 }],
+    "id-length": ["warn", { "exceptions": ["i", "j", "_"], "min": 2 }],
     "no-lonely-if": ["error"],
     "no-plusplus": "off",
     "no-restricted-syntax": "off",
