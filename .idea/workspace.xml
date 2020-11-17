@@ -20,28 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18e43624-bba1-4541-b990-3a7ccc9e3987" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pagination-block/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pagination-block/pagination-block.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pagination-block/pagination-block.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/search/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/search/search.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/search/search.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabs-container/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabs-container/tabs-container.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabs-container/tabs-container.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie-card/movie-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-card/movie-card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movies-list/movies-list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movies-list/movies-list.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/movie-db-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie-db-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/errorAlert/error-alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/errorAlert/error-alert.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/loading/loading.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/loading/loading.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/fonts/inter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todo-react-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -113,7 +93,9 @@
       <workItem from="1604987457024" duration="7027000" />
       <workItem from="1605089285223" duration="16104000" />
       <workItem from="1605169080435" duration="20095000" />
-      <workItem from="1605254906185" duration="611000" />
+      <workItem from="1605254906185" duration="1272000" />
+      <workItem from="1605414764241" duration="48000" />
+      <workItem from="1605624378783" duration="2864000" />
     </task>
     <servers />
   </component>
@@ -145,18 +127,18 @@
       <screen x="74" y="27" width="1526" height="873" />
     </state>
     <state x="472" y="241" width="719" height="452" key="EditFileWatcherDialog/74.27.1526.873@74.27.1526.873" timestamp="1604210817892" />
-    <state x="620" y="221" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604152874826">
+    <state x="620" y="221" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605414806925">
       <screen x="74" y="27" width="1526" height="873" />
     </state>
-    <state x="620" y="221" width="424" height="491" key="FileChooserDialogImpl/74.27.1526.873@74.27.1526.873" timestamp="1604152874826" />
+    <state x="620" y="221" width="424" height="491" key="FileChooserDialogImpl/74.27.1526.873@74.27.1526.873" timestamp="1605414806925" />
     <state x="326" y="98" width="1022" height="737" key="SettingsEditor" timestamp="1604316997086">
       <screen x="74" y="27" width="1526" height="873" />
     </state>
     <state x="326" y="98" width="1022" height="737" key="SettingsEditor/74.27.1526.873@74.27.1526.873" timestamp="1604316997086" />
-    <state x="528" y="202" width="618" height="522" key="find.popup" timestamp="1605255512366">
+    <state x="528" y="202" width="618" height="522" key="find.popup" timestamp="1605627856780">
       <screen x="74" y="27" width="1526" height="873" />
     </state>
-    <state x="528" y="202" width="618" height="522" key="find.popup/74.27.1526.873@74.27.1526.873" timestamp="1605255512366" />
+    <state x="528" y="202" width="618" height="522" key="find.popup/74.27.1526.873@74.27.1526.873" timestamp="1605627856780" />
     <state x="501" y="207" key="run.anything.popup" timestamp="1605196632258">
       <screen x="74" y="27" width="1526" height="873" />
     </state>
