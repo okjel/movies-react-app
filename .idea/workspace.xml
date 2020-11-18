@@ -20,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18e43624-bba1-4541-b990-3a7ccc9e3987" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/shared/section-tabs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination-block/pagination-block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination-block/pagination-block.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabs-container/tabs-container.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs-container/tabs-container.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/movie-db-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie-db-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +100,8 @@
       <workItem from="1605169080435" duration="20095000" />
       <workItem from="1605254906185" duration="1272000" />
       <workItem from="1605414764241" duration="48000" />
-      <workItem from="1605624378783" duration="2864000" />
+      <workItem from="1605624378783" duration="3535000" />
+      <workItem from="1605703286121" duration="11224000" />
     </task>
     <servers />
   </component>
@@ -115,10 +121,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="530" y="265" width="604" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604209449457">
+    <state x="530" y="265" width="612" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605711639456">
       <screen x="74" y="27" width="1526" height="873" />
     </state>
-    <state x="530" y="265" width="604" height="403" key="#com.intellij.fileTypes.FileTypeChooser/74.27.1526.873@74.27.1526.873" timestamp="1604209449457" />
+    <state x="530" y="265" width="612" height="403" key="#com.intellij.fileTypes.FileTypeChooser/74.27.1526.873@74.27.1526.873" timestamp="1605711639456" />
     <state x="570" y="212" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604155905199">
       <screen x="74" y="27" width="1526" height="873" />
     </state>
@@ -143,9 +149,9 @@
       <screen x="74" y="27" width="1526" height="873" />
     </state>
     <state x="501" y="207" key="run.anything.popup/74.27.1526.873@74.27.1526.873" timestamp="1605196632258" />
-    <state x="500" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1605195995129">
+    <state x="500" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1605711732381">
       <screen x="74" y="27" width="1526" height="873" />
     </state>
-    <state x="500" y="214" width="672" height="678" key="search.everywhere.popup/74.27.1526.873@74.27.1526.873" timestamp="1605195995129" />
+    <state x="500" y="214" width="672" height="678" key="search.everywhere.popup/74.27.1526.873@74.27.1526.873" timestamp="1605711732381" />
   </component>
 </project>

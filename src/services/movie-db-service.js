@@ -1,13 +1,7 @@
 export default class MovieDbService {
-  constructor() {
-    if (MovieDbService.guestSession) return;
-    this.createGuestSession().then((data) => {
-      if (MovieDbService.guestSession) return;
-      MovieDbService.guestSession = data.guest_session_id;
-    });
-  }
+  guestSession;
 
-  static guestSession = '';
+  genres;
 
   apiBase = 'https://api.themoviedb.org/3/';
 
@@ -25,18 +19,25 @@ export default class MovieDbService {
     return res.json();
   }
 
-  getFilms(name, page) {
+  getSearchFilms(name, page) {
     const path = 'search/movie';
     return this.getResource(`${path}${this.queryApi}&query=${name}&page=${page}`);
   }
 
-  getGenres(name = 'return') {
-    const path = 'genre/movie/list';
-    return this.getResource(`${path}${this.queryApi}&query=${name}`);
+  getRatedFilms() {
+    const path = `guest_session/${this.guestSession}/rated/movies`;
+    return this.getResource(`${path}${this.queryApi}`);
   }
 
-  createGuestSession() {
+  async syncGenres(name = 'return') {
+    const path = 'genre/movie/list';
+    const genresResponse = await this.getResource(`${path}${this.queryApi}&query=${name}`);
+    this.genres = genresResponse.genres;
+  }
+
+  async createGuestSession() {
     const path = '/authentication/guest_session/new';
-    return this.getResource(`${path}${this.queryApi}`);
+    const guestSessionResponse = await this.getResource(`${path}${this.queryApi}`);
+    this.guestSession = guestSessionResponse.guest_session_id;
   }
 }

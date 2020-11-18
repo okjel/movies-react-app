@@ -1,37 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Tabs } from 'antd';
-import Search from '../search';
+import SectionTabs from '../../shared/section-tabs';
 
 const { TabPane } = Tabs;
 
 class TabsContainer extends Component {
-  state = {
-    tabs: [
-      {
-        name: 'Search',
-        id: 1,
-        content: <Search changeInput={this.props.changeInput} />,
-      },
-      {
-        name: 'Rated',
-        id: 2,
-        content: 'rated',
-      },
-    ],
-  };
+  state = {};
 
   render() {
-    const renderTabs = this.state.tabs.map(({ id, name, content }) => {
-      return (
-        <TabPane tab={name} key={id}>
-          {content}
-        </TabPane>
-      );
+    const renderTabs = Object.keys(SectionTabs).map((tabName) => {
+      return <TabPane tab={SectionTabs[tabName].name} key={SectionTabs[tabName].id} />;
     });
 
     return (
-      <Tabs defaultActiveKey="1" centered>
+      <Tabs defaultActiveKey="1" centered onChange={this.props.changeTabSection}>
         {renderTabs}
       </Tabs>
     );
@@ -39,7 +22,7 @@ class TabsContainer extends Component {
 }
 
 TabsContainer.propTypes = {
-  changeInput: PropTypes.func.isRequired,
+  changeTabSection: PropTypes.func.isRequired,
 };
 
 export default TabsContainer;

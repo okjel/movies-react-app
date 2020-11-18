@@ -30,6 +30,7 @@ class PaginationBlock extends Component {
           defaultPageSize={20}
           showSizeChanger={false}
           onChange={this.onChange}
+          hideOnSinglePage
         />
       </div>
     );
