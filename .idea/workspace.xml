@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18e43624-bba1-4541-b990-3a7ccc9e3987" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/shared/section-tabs.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/movie-db-service-context/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/vote-colors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination-block/pagination-block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination-block/pagination-block.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs-container/tabs-container.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs-container/tabs-container.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movie-card/movie-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-card/movie-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movie-card/movie-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-card/movie-card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movies-list/movies-list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movies-list/movies-list.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/movie-db-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie-db-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +102,10 @@
       <workItem from="1605254906185" duration="1272000" />
       <workItem from="1605414764241" duration="48000" />
       <workItem from="1605624378783" duration="3535000" />
-      <workItem from="1605703286121" duration="11224000" />
+      <workItem from="1605703286121" duration="12850000" />
+      <workItem from="1605788708813" duration="9775000" />
+      <workItem from="1605860156831" duration="5094000" />
+      <workItem from="1605872743775" duration="3740000" />
     </task>
     <servers />
   </component>
@@ -141,10 +145,10 @@
       <screen x="74" y="27" width="1526" height="873" />
     </state>
     <state x="326" y="98" width="1022" height="737" key="SettingsEditor/74.27.1526.873@74.27.1526.873" timestamp="1604316997086" />
-    <state x="528" y="202" width="618" height="522" key="find.popup" timestamp="1605627856780">
+    <state x="528" y="202" width="618" height="522" key="find.popup" timestamp="1605878789304">
       <screen x="74" y="27" width="1526" height="873" />
     </state>
-    <state x="528" y="202" width="618" height="522" key="find.popup/74.27.1526.873@74.27.1526.873" timestamp="1605627856780" />
+    <state x="528" y="202" width="618" height="522" key="find.popup/74.27.1526.873@74.27.1526.873" timestamp="1605878789304" />
     <state x="501" y="207" key="run.anything.popup" timestamp="1605196632258">
       <screen x="74" y="27" width="1526" height="873" />
     </state>

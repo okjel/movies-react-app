@@ -23,14 +23,17 @@ export default class MoviesList extends Component {
             title: PropTypes.string,
           })
         ),
+        ratingCur: PropTypes.number.isRequired,
+        voteAverage: PropTypes.number.isRequired,
       })
     ).isRequired,
     loading: PropTypes.bool.isRequired,
     error: PropTypes.bool.isRequired,
+    ratingFilm: PropTypes.func.isRequired,
   };
 
   render() {
-    const { movies, loading, error } = this.props;
+    const { movies, loading, error, ratingFilm } = this.props;
     const hasData = !(loading || error);
     const loadingBlock = loading ? <Loading /> : null;
     const errorBlock = error ? <ErrorAlert /> : null;
@@ -41,7 +44,7 @@ export default class MoviesList extends Component {
         dataSource={movies}
         renderItem={(movie) => (
           <List.Item>
-            <MovieCard key={movie.id} movie={movie}>
+            <MovieCard key={movie.id} movie={movie} ratingFilm={(rating) => ratingFilm(movie.id, rating)}>
               Card content
             </MovieCard>
           </List.Item>

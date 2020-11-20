@@ -19,6 +19,22 @@ export default class MovieDbService {
     return res.json();
   }
 
+  async postData(query, data) {
+    const res = await fetch(`${this.apiBase}${query}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      throw new Error(`Could not fetch ${query}, received ${res.status}`);
+    }
+
+    return res.json();
+  }
+
   getSearchFilms(name, page) {
     const path = 'search/movie';
     return this.getResource(`${path}${this.queryApi}&query=${name}&page=${page}`);
@@ -27,6 +43,12 @@ export default class MovieDbService {
   getRatedFilms() {
     const path = `guest_session/${this.guestSession}/rated/movies`;
     return this.getResource(`${path}${this.queryApi}`);
+  }
+
+  rateFilm(id, rating) {
+    const path = `movie/${id}/rating`;
+    const data = { value: rating };
+    return this.postData(`${path}${this.queryApi}&guest_session_id=${this.guestSession}`, data);
   }
 
   async syncGenres(name = 'return') {
