@@ -1,35 +1,46 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import { debounce } from 'lodash';
 import 'antd/dist/antd.css';
-import '../../font.css';
 import MoviesList from '../movies-list';
 import './App.scss';
 import MovieDbService from '../../services/movie-db-service';
+import LocalStorageService from '../../services/local-storage-service';
 import Header from '../header';
 import PaginationBlock from '../pagination-block';
-import SectionTabs from '../../shared/section-tabs';
+import sectionTabs from '../../shared/section-tabs';
 import { MovieDbServiceProvider } from '../movie-db-service-context';
 
 export default class App extends Component {
-  movieDbService;
-
   totalMovies = 0;
+
+  state = {
+    movies: [],
+    pages: { currentPage: 1, totalMovies: 0 },
+    search: '',
+    loading: true,
+    error: false,
+    activeTab: sectionTabs.Search.id,
+  };
 
   updateData = async (search = 'return', page = 1) => {
     if (!this.state.loading) {
-      this.setState({ loading: true });
+      this.setState({ loading: true, error: false });
     }
     try {
       let filmsResponse;
-      if (this.state.activeTab === SectionTabs.Search.id) {
-        filmsResponse = await this.movieDbService.getSearchFilms(search, page);
-      } else if (this.state.activeTab === SectionTabs.Rated.id) {
-        filmsResponse = await this.movieDbService.getRatedFilms();
+
+      if (this.state.activeTab === sectionTabs.Search.id) {
+        filmsResponse = await MovieDbService.getSearchFilms(search, page);
       }
+
+      if (this.state.activeTab === sectionTabs.Rated.id) {
+        filmsResponse = await MovieDbService.getRatedFilms();
+      }
+
       this.totalMovies = filmsResponse.total_results;
-      const ratedFilms = JSON.parse(localStorage.getItem('ratedFilms'));
+      const ratedFilms = LocalStorageService.getRatedFilms();
       const movies = filmsResponse.results.map((movie) => {
-        const genresFilm = movie.genre_ids.map((el) => this.movieDbService.genres.find((i) => i.id === el));
+        const genresFilm = movie.genre_ids.map((el) => MovieDbService.genres.find((i) => i.id === el));
         const ratedFilm = ratedFilms ? ratedFilms.find((movieRated) => movieRated.id === movie.id) : null;
         let rating = 0;
         if (movie.rating) rating = movie.rating;
@@ -52,9 +63,9 @@ export default class App extends Component {
   };
 
   async componentDidMount() {
-    this.movieDbService = new MovieDbService();
-    await this.movieDbService.createGuestSession();
-    await this.movieDbService.syncGenres();
+    LocalStorageService.clear();
+    await MovieDbService.createGuestSession();
+    await MovieDbService.syncGenres();
     await this.updateData();
   }
 
@@ -62,17 +73,8 @@ export default class App extends Component {
     if (prevState.activeTab !== this.state.activeTab) this.updateData();
   }
 
-  state = {
-    movies: [],
-    pages: { currentPage: 1, totalMovies: 0 },
-    search: '',
-    loading: true,
-    error: false,
-    activeTab: SectionTabs.Search.id,
-  };
-
   rateFilm = (id, rating) => {
-    this.movieDbService.rateFilm(id, rating).catch(() => {
+    MovieDbService.rateFilm(id, rating).catch(() => {
       this.onError();
     });
     this.setState(
@@ -85,7 +87,7 @@ export default class App extends Component {
         const ratedFilms = this.state.movies
           .filter((movie) => movie.ratingCur > 0)
           .map((movie) => ({ id: movie.id, rating: movie.ratingCur }));
-        localStorage.setItem('ratedFilms', JSON.stringify(ratedFilms));
+        LocalStorageService.setRatedFilms(ratedFilms);
       }
     );
   };
@@ -106,6 +108,10 @@ export default class App extends Component {
     });
   };
 
+  debouncedFunc = debounce(() => {
+    this.updateData(this.state.search);
+  }, 1000);
+
   changeInput = (value) => {
     if (!value) return;
     this.setState(
@@ -113,10 +119,7 @@ export default class App extends Component {
         search: value.trim(),
         pages: { currentPage: 1 },
       },
-      () => {
-        const debounce = _.debounce(() => this.updateData(this.state.search), 1000);
-        debounce();
-      }
+      this.debouncedFunc
     );
   };
 
@@ -127,7 +130,7 @@ export default class App extends Component {
   render() {
     const { loading, error, movies, pages, activeTab } = this.state;
     return (
-      <MovieDbServiceProvider value={this.movieDbService}>
+      <MovieDbServiceProvider value={MovieDbService}>
         <div className="app">
           <div className="app__container">
             <Header changeInput={this.changeInput} changeTabSection={this.changeTabSection} activeTab={activeTab} />

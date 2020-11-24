@@ -1,24 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Tabs } from 'antd';
-import SectionTabs from '../../shared/section-tabs';
+import sectionTabs from '../../shared/section-tabs';
 
 const { TabPane } = Tabs;
 
-class TabsContainer extends Component {
-  state = {};
+function TabsContainer({ changeTabSection }) {
+  const renderTabs = Object.keys(sectionTabs).map((tabName) => {
+    return <TabPane tab={sectionTabs[tabName].name} key={sectionTabs[tabName].id} />;
+  });
 
-  render() {
-    const renderTabs = Object.keys(SectionTabs).map((tabName) => {
-      return <TabPane tab={SectionTabs[tabName].name} key={SectionTabs[tabName].id} />;
-    });
-
-    return (
-      <Tabs defaultActiveKey="1" centered onChange={this.props.changeTabSection}>
-        {renderTabs}
-      </Tabs>
-    );
-  }
+  return (
+    <Tabs defaultActiveKey="1" centered onChange={changeTabSection}>
+      {renderTabs}
+    </Tabs>
+  );
 }
 
 TabsContainer.propTypes = {

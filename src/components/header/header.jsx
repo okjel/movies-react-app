@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import TabsContainer from '../tabs-container';
 import Search from '../search';
-import SectionTabs from '../../shared/section-tabs';
+import sectionTabs from '../../shared/section-tabs';
 
-class Header extends Component {
-  state = {};
-
-  render() {
-    const { changeInput, changeTabSection, activeTab } = this.props;
-    return (
-      <>
-        <TabsContainer changeTabSection={changeTabSection} />
-        {activeTab === SectionTabs.Search.id ? <Search changeInput={changeInput} /> : null}
-      </>
-    );
-  }
+function Header({ changeInput, changeTabSection, activeTab }) {
+  return (
+    <>
+      <TabsContainer changeTabSection={changeTabSection} />
+      {activeTab === sectionTabs.Search.id ? <Search changeInput={changeInput} /> : null}
+    </>
+  );
 }
 
 Header.propTypes = {
